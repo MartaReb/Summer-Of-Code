@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Day3</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let num = Math.floor(Math.random()*10);
+
+    for (let i = 0; i < 5; i++) {
+        let userNum = prompt("Zgadnij wylosowaną liczbę w zakresie 0 - 10. Możesz to zrobić 5 razy: ");
+        if (num == userNum){
+            alert("Brawo to ta liczba! Udało Ci się za "+ (i+1) + " razem.");
+            break;
+        } else if (num > userNum) {
+            alert("Podana przez ciebie liczba jest mniejsza od wylosowanej. Zgaduj dalej!")      
+        } else {
+            alert("Podana przez ciebie liczba jest większa od wylosowanej. Zgaduj dalej!")
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,50 @@
+<!-- Utwórz mały skrypt zarządzania książkami na półce.
+
+💡 JS script:
+- addBook()
+- deleteBook()
+- displayBooks()
+[zastanów się nad mechanizmem usuwania ksiażki z listy, po ID czy tytule, może użytkownik będzie musiał podać ID książki by ją usunąć, a może warto dodać guzik usuwania obok każdej książki]
+Może Ci się przydać np.
+splice(), getElementById(), createElement()
+Rozszerzenie: zabezpiecz inputy tak by tytuł musiał być tekstem, a rok liczbą. Niech wszystkie pola będą obowiązkowe. -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Day4-bookshelf</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <header>
+            <h1>The Bookshelf</h1>
+        </header>
+            <main>
+                <section>
+                    <h3>Add a book:</h3>
+                    <form id="form">
+                        <label for="title">Title:</label>
+                        <input id="title" type="text" name="title" value="" required><br>
+                        <label for="author">Author:</label>
+                        <input id="author" type="text" name="author" value="" required><br>
+                        <label for="year">Year:</label>
+                        <input id="year" type="number" name="year" value="" required><br>
+                        <div id="btn">
+                            <input id="submit" class="btnItem" type="button" value="Submit">
+                            <input class="btnItem" type="reset" value="Clear">
+                        </div>
+                    </form>
+                </section>
+                <section id="liSection">
+                    <h3>Book list:</h3>
+                    <ul id="liBook">
+                    </ul>
+                </section> 
+        </main>  
+    </body>
+    <script src="script.js"></script>
+</html>
