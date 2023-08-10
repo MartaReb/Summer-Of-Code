@@ -1,2 +1,2 @@
-# Summer-Of-Code-Python
+# Summer-Of-Code
  
