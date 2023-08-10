@@ -1,0 +1,9 @@
+1. Wykonaj zapytanie GET do OpenWeatherMap API, aby pobrać dane dotyczące aktualnej prognozy pogody dla wybranego miasta.
+
+    curl 'http://api.openweathermap.org/geo/1.0/direct?q=Warszawa&limit=2&appid={API key}'
+
+    curl 'https://api.openweathermap.org/data/3.0/onecall?lat=52.2337172&lon=21.071432235636493&appid={API key}'
+
+2. Wykonaj zapytanie GET, które zwróci prognozę pogody 5-dniową dla Warszawy (zwróć uwagę, że możesz zapytanie wykonać na 2 sposoby podając długość i szerokość geograficzną, albo korzystając z wbudowanej opcji query params Built-in API request by city name).
+
+    curl 'api.openweathermap.org/data/2.5/forecast?lat=52.5737556&lon=20.8569388&appid={API key}'
