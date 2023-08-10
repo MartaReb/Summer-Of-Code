@@ -1,0 +1,15 @@
+Wykonaj zapytanie GET do JSONPlaceholder API. Zapoznaj się z dokumentacją i pobierz wszystkich użytkowników.
+
+curl https://jsonplaceholder.typicode.com/users
+
+Wykonaj zapytanie POST do API udostępniającego funkcjonalność tworzenia rekordu.
+
+curl -X POST https://jsonplaceholder.typicode.com/users \
+    -H 'Content-Type: application/json' \
+    -d '{"id": 11, "name":"John Lennon","username":"JL","email":"JohnLennon@gmail.com","address":{"street":"Oxford Street Light","city":"Liverpool"}}'
+
+Spróbuj wykonać żądanie PUT, aby zaktualizować istniejący zasób, użyj JSONPlaceholder API posts/1 .
+
+curl -X PUT https://jsonplaceholder.typicode.com/posts/1 \
+    -H 'Content-Type: application/json' \
+    -d '{"id":1, "title":"foo", "body":"bar"}'
