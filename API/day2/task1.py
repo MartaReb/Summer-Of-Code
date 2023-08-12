@@ -11,7 +11,7 @@ else:
     print("GET response content : " + str(response.json()))
 
 
-new_user = {"id": 11,"name":"John Lennon","username":"JL","email":"JohnLennon@gmail.com"}
+new_user = {"id":11,"name":"John Lennon","username":"JL","email":"JohnLennon@gmail.com"}
 try:
     response = requests.post('https://jsonplaceholder.typicode.com/users', data=new_user)
     response.raise_for_status()
@@ -23,7 +23,7 @@ else:
     print("POST response content : " + str(response.json()))
 
 try:
-    response = requests.put('https://jsonplaceholder.typicode.com/posts/1', data={"id":1, "title":"foo", "body":"bar"})
+    response = requests.put('https://jsonplaceholder.typicode.com/posts/1', data={"id":1,"title":"foo","body":"bar"})
     response.raise_for_status()
 except requests.exceptions.RequestException as err:
     print(f"Error occurred: {err}")
