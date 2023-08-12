@@ -1,4 +1,4 @@
-// Wykorzystaj endpoint https://reqres.in/api/users?page=1 do pobrania listy użytkowników. Wynik powinen wyświetlić się w konsoli w sposób sformatowany
+// 1.Wykorzystaj endpoint https://reqres.in/api/users?page=1 do pobrania listy użytkowników. Wynik powinen wyświetlić się w konsoli w sposób sformatowany
 
 fetch('https://reqres.in/api/users?page=1 ')
     .then(res => res.json())
@@ -9,5 +9,6 @@ fetch('https://reqres.in/api/users?page=1 ')
             console.log("Last name: " + users[i].last_name)
             console.log("Email: " + users[i].email)
             console.log("Avatar: " + users[i].avatar)
+            console.log("--------")
         }
-    })
+    }).catch(error => console.log('ERROR'))
