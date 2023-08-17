@@ -6,25 +6,25 @@
 
 body {
     background-color: #f8e2ef;
-    font-family: Arial;
-    letter-spacing: 2px;
+    font-family:'Russo One', sans-serif;
+    letter-spacing: 0.1em;
 }
 
 h1 {
     color: #d45d84;
-    font-size: 60px;
+    font-size: 3vw;
 }
 
 p {
-    font-size: 20px;
+    font-size: 1.5vw;
     margin: 35px;
     color:#323333;
-    padding: 0px 150px;
+    padding: 0px 70px;
 
 }
 
 #mainNav {
-    margin: 60px auto 0px
+    margin: 50px auto 0px
 }
 
 #mainNav ul {
@@ -34,11 +34,12 @@ p {
 
 #mainNav li {
     display: inline;
-    margin: 60px; 
+    margin: auto 50px;
 }
 
 #mainNav a {
     color: #368b9b;
+    font-size: 1vw;
     text-decoration: none;
     font-weight: bold;
 }
@@ -51,7 +52,54 @@ p {
     padding: 50px;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+  }
+
 footer p {
     font-size: 12px;
     text-align: center;
+    margin: auto 80px;
+    line-height: 20px;
 }
+
+@media (max-width: 1024px) { 
+    p { padding: 0px;
+    }
+    #mainNav ul {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(2, 30px);
+    }
+    
+    .item1, .item3 {
+        padding-left: 150px;
+    }
+
+    .item2, .item4 {
+        padding-right: 150px;
+    }
+}
+
+@media (max-width: 768px) { 
+    .item1, .item3 {
+        padding-left: 80px;
+    }
+
+    .item2, .item4 {
+        padding-right: 80px;
+    }
+ }
+
+ @media (max-width: 630px) { 
+    #mainNav ul {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(4, 30px);
+
+    }
+    .item1, .item3, .item2, .item4 {
+        padding: 0;
+    }
+ }
